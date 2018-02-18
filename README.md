@@ -21,7 +21,7 @@ additional classes.
 ```lua
 Point = Object:extend()
 
-function Point:new(x, y)
+function Point:init(x, y)
   self.x = x or 0
   self.y = y or 0
 end
@@ -36,8 +36,8 @@ local p = Point(10, 20)
 ```lua
 Rect = Point:extend()
 
-function Rect:new(x, y, width, height)
-  Rect.super.new(self, x, y)
+function Rect:init(x, y, width, height)
+  Rect.super.init(self, x, y)
   self.width = width or 0
   self.height = height or 0
 end
@@ -65,7 +65,7 @@ end
 Point = Object:extend()
 Point:implement(PairPrinter)
 
-function Point:new(x, y)
+function Point:init(x, y)
   self.x = x or 0
   self.y = y or 0
 end
@@ -80,7 +80,7 @@ p:printPairs()
 Point = Object:extend()
 Point.scale = 2
 
-function Point:new(x, y)
+function Point:init(x, y)
   self.x = x or 0
   self.y = y or 0
 end
